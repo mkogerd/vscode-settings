@@ -1,18 +1,32 @@
 {
+  // Universal settings
   "vim.showMarksInGutter": true,
-  //   "git.terminalAuthentication": false,
-  "editor.linkedEditing": true,
-  "[javascript][javascriptreact][typescript][typescriptreact][json]": {
-    "editor.tabSize": 2
-  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.localEchoLatencyThreshold": -1,
   "editor.formatOnSave": true,
+  "workbench.startupEditor": "none", // Don't open welcome page at startup
   "workbench.iconTheme": "material-icon-theme",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Web development settings
+  "editor.linkedEditing": true,
+  "json.format.enable": false, // disable default formatter so prettier can take over
   "react-native.packager.port": 19001,
-  "workbench.startupEditor": "none",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
+  "[javascript][javascriptreact][typescript][typescriptreact][json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true
+  },
+
+  // Python settings
+  "debugpy.debugJustMyCode": false,
+  "ruff.lint.extendSelect": ["B", "Q", "N", "ANN"],
+  "ruff.nativeServer": true,
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   }
 }
